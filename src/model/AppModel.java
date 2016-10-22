@@ -75,4 +75,8 @@ public class AppModel {
 	public Integer getEnemyScore() {
 		return scoreEnemy;
 	}
+	
+	public Integer getNumberOfRounds() {
+		return choices.size();
+	}
 }
