@@ -39,4 +39,32 @@ public class AppModel {
 		choices.add(choice);
 		return choice;
 	}
+	
+	public void nextRound() {
+		if (choices.size() == 0 || responses.size() == 0) {
+			return;
+		}
+		Integer me = choices.get(choices.size() - 1);
+		Integer he = responses.get(responses.size() - 1);
+		if (me == 1) {
+			if (he == 1) {
+				scoreMine += 5;
+				scoreEnemy += 5;
+			}
+			else if (he == 2) {
+				scoreEnemy += 10;
+			}
+			else if (he == 3) {
+				scoreMine += 4;
+				scoreEnemy += 6;
+			}
+		}
+		else if (me == 2 && he == 1) {
+			scoreMine += 10;
+		}
+		else if (me == 3 && he == 1) {
+			scoreMine += 6;
+			scoreEnemy += 4;
+		}
+	}
 }
