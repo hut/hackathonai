@@ -16,7 +16,7 @@ public class StrategiesComparator {
 	}
 	
 	public static void main(String[] args) {
-		StrategiesComparator comparator = new StrategiesComparator(new BetrayLastStrategy(), new AlwaysCooperateStrategy());
+		StrategiesComparator comparator = new StrategiesComparator(new BetrayLastStrategy(), new WetForWetStrategy());
 		comparator.compare(6);
 		
 		StrategiesComparator comparator2 = new StrategiesComparator(new WetForWetStrategy(), new AlwaysCooperateStrategy());

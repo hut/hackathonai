@@ -12,7 +12,7 @@ public class BetrayLastStrategy extends AppModel {
 	public void newGame() {
 		super.newGame();
 		Random rnd = new Random();
-		enemyNumber = rnd.nextInt(4) + 2; // random int between 2-5
+		enemyNumber = 3 - ((rnd.nextInt(5) + 1) / 5); /* 3 minus (1 in 20% of the times, otherwise 0) */
 	}
 	
 	@Override
