@@ -23,7 +23,7 @@ public class AppController {
 			model.nextRound();
 		}
 		
-		System.out.println(model.getClass().getName() + " score: " + model.getMyScore());
-		System.out.println(model.getClass().getName() + " score: " + model.getMyScore());
+		System.out.println("Our score: " + model.getMyScore());
+		System.out.println("Enemy score: " + model.getEnemyScore());
 	}
 }
