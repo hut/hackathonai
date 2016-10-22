@@ -1,13 +1,11 @@
 package hackathonai;
 
-import view.AppView;
+import controller.AppController;
 
 public class Main {
 	
 	public static void main(String[] args) {
-		AppView view = new AppView();
-		view.writeChoice(1);
-		view.writeChoice(2);
-		view.writeChoice(3);
+		AppController controller = new AppController();
+		controller.loop();
 	}
 }
