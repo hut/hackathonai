@@ -1,6 +1,7 @@
 package controller;
 
 import model.AppModel;
+import strategies.BetrayLastStrategy;
 import view.AppView;
 
 public class AppController {
@@ -9,7 +10,7 @@ public class AppController {
 	AppModel model;
 	
 	public AppController() {
-		this.model = new AppModel();
+		this.model = new BetrayLastStrategy();
 		this.view = new AppView();
 	}
 	
