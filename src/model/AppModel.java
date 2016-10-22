@@ -67,4 +67,12 @@ public class AppModel {
 			scoreEnemy += 4;
 		}
 	}
+	
+	public Integer getMyScore() {
+		return scoreMine;
+	}
+	
+	public Integer getEnemyScore() {
+		return scoreEnemy;
+	}
 }

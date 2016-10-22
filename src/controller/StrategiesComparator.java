@@ -4,12 +4,12 @@ import model.AppModel;
 import strategies.DifferentStrategy;
 import strategies.WetForWetStrategy;
 
-public class ModelsComparator {
+public class StrategiesComparator {
 	
 	AppModel first;
 	AppModel second;
 	
-	public ModelsComparator() {
+	public StrategiesComparator() {
 		first = new WetForWetStrategy();
 		second = new DifferentStrategy();
 	}
@@ -22,7 +22,12 @@ public class ModelsComparator {
 			Integer secondPlayerChoice = second.makeChoice();
 			first.enemyResponse(secondPlayerChoice);
 			second.enemyResponse(firstPlayerChoice);
+			first.nextRound();
+			second.nextRound();
 		}
+		
+		System.out.println(first.getClass().getName() + " score: " + first.getMyScore());
+		System.out.println(second.getClass().getName() + " score: " + second.getMyScore());
 
 	}
 
