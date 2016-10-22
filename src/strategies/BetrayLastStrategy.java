@@ -22,6 +22,7 @@ public class BetrayLastStrategy extends AppModel {
 		}
 		else {
 			/* betray on the predicted last round */
+			choices.add(2);
 			return 2;
 		}
 	}
