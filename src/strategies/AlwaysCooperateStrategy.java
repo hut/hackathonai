@@ -6,6 +6,8 @@ public class AlwaysCooperateStrategy extends AppModel{
 
 	@Override
 	public Integer makeChoice() {
-		return 1;
+		Integer choice = 1;
+		choices.add(choice);
+		return choice;
 	}
 }

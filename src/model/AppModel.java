@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AppModel {
-	List<Integer> responses, choices;
+	List<Integer> responses;
+	public List<Integer> choices;
 	Integer scoreEnemy, scoreMine;
 	boolean I_start;
 	
