@@ -22,5 +22,8 @@ public class AppController {
 			model.enemyResponse(view.readEnemyChoice());
 			model.nextRound();
 		}
+		
+		System.out.println(model.getClass().getName() + " score: " + model.getMyScore());
+		System.out.println(model.getClass().getName() + " score: " + model.getMyScore());
 	}
 }
