@@ -30,9 +30,12 @@ public class StrategiesComparator {
 			first.nextRound();
 			second.nextRound();
 		}
-		
+
 		System.out.println(first.getClass().getName() + " score: " + first.getMyScore());
 		System.out.println(second.getClass().getName() + " score: " + second.getMyScore());
+
+		System.out.println(first.getClass().getName() + " score: " + second.getEnemyScore());
+		System.out.println(second.getClass().getName() + " score: " + first.getEnemyScore());
 
 	}
 
