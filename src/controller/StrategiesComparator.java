@@ -1,7 +1,7 @@
 package controller;
 
 import model.AppModel;
-import strategies.DifferentStrategy;
+import strategies.AlwaysCooperateStrategy;
 import strategies.WetForWetStrategy;
 
 public class StrategiesComparator {
@@ -11,7 +11,12 @@ public class StrategiesComparator {
 	
 	public StrategiesComparator() {
 		first = new WetForWetStrategy();
-		second = new DifferentStrategy();
+		second = new AlwaysCooperateStrategy();
+	}
+	
+	public static void main(String[] args) {
+		StrategiesComparator comparator = new StrategiesComparator();
+		comparator.compare();
 	}
 	
 	public void compare() {

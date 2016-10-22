@@ -2,10 +2,10 @@ package strategies;
 
 import model.AppModel;
 
-public class AlwaysLieStrategy extends AppModel{
+public class AlwaysCooperateStrategy extends AppModel{
 
 	@Override
 	public Integer makeChoice() {
-		return 2;
+		return 1;
 	}
 }
