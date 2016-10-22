@@ -17,7 +17,7 @@ public class BetrayLastStrategy extends AppModel {
 	
 	@Override
 	public Integer makeChoice() {
-		if (getNumberOfRounds() < ourNumber + enemyNumber) {
+		if (getNumberOfRounds() + 1 < ourNumber + enemyNumber) {
 			return super.makeChoice();
 		}
 		else {
