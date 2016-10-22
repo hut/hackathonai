@@ -19,6 +19,7 @@ public class AppController {
 		for(int i = 0; i < turnsNumber; i++) {
 			view.writeChoice(model.makeChoice());
 			model.enemyResponse(view.readEnemyChoice());
+			model.nextRound();
 		}
 	}
 }
