@@ -11,13 +11,14 @@ public class AppModel {
 	public AppModel() {
 		responses = new ArrayList<Integer>();
 		choices = new ArrayList<Integer>();
+		newGame();
 	}
 
-	public void newGame(boolean I_start) {
+	public void newGame() {
 		scoreMine = 0;
 		scoreEnemy = 0;
 		responses.clear();
-		this.I_start = I_start;
+		choices.clear();
 	}
 
 	public void enemyResponse(Integer response) {
@@ -26,11 +27,14 @@ public class AppModel {
 
 	public Integer makeChoice() {
 		Integer choice;
-		if (responses.size() == 0 && I_start) {
+		if (responses.size() == 0) {
 			choice = 1;
 		} else {
 			Integer lastResponse = responses.get(responses.size() - 1);
 			choice = lastResponse;
+		}
+		if (choice == 3) {
+			choice = 2;
 		}
 		choices.add(choice);
 		return choice;
